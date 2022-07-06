@@ -18,7 +18,7 @@ const About = () =>{
 
 
 
-    const images = ["https://media.istockphoto.com/photos/saudi-arabiariyadhking-fahad-road-at-night7-picture-id1168210356?k=20&m=1168210356&s=612x612&w=0&h=yH1Il4_3zIBv5xNSYJPOjBzAnl15dqGD2v_kbS9tAs4=","https://media.istockphoto.com/photos/kingdom-of-saudi-arabia-landscape-at-night-riyadh-tower-kingdom-picture-id1264361225?k=20&m=1264361225&s=612x612&w=0&h=5RvVRReeVok7igQNyn2l19m7f6K-sRnI9FVbM94c_DI="];
+    const images = ["https://www.ewaahotels.com/uploads/image-slider/03d7703488a58cec3059bc6df945fad41582891535.jpg","https://media.istockphoto.com/photos/saudi-arabiariyadhking-fahad-road-at-night7-picture-id1168210356?k=20&m=1168210356&s=612x612&w=0&h=yH1Il4_3zIBv5xNSYJPOjBzAnl15dqGD2v_kbS9tAs4=","https://media.istockphoto.com/photos/kingdom-of-saudi-arabia-landscape-at-night-riyadh-tower-kingdom-picture-id1264361225?k=20&m=1264361225&s=612x612&w=0&h=5RvVRReeVok7igQNyn2l19m7f6K-sRnI9FVbM94c_DI="];
     const [count1 , setCount1] = useState(0);
     const nextImage=()=>{
         if(count1 < images.length-1){
@@ -35,11 +35,14 @@ useEffect(() => {
     
     return console.log("out")
 }, [console.log(`You updated ${count1+1} times`)]);
+
+
+
     return(
         <div className="About">
 
-        <button onClick={()=> setShowComponent(true)}>Show Components</button>
-        <button onClick={()=> setShowComponent(false)}>Hide Components</button>
+        <Button variant="warning" onClick={()=> setShowComponent(true)}>Show Components</Button>
+        <Button variant="warning" onClick={()=> setShowComponent(false)}>Hide Components</Button>
         {showComponent && <Cards />}
 
 

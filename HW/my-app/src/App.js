@@ -7,9 +7,9 @@ import Cards from "./component/Cards";
 import About from "./component/About";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
+    
     <div className="App">
       {/* <Router>
        
@@ -20,13 +20,16 @@ function App() {
           <Routes path="/About" element={About }></Route>
         </Route>
       </Router> */}
-       <Header />
       <Router>
+               <Header />
+
         <Routes>
           <Route path="/Cards" element={<Cards /> }></Route>
           <Route path="/About" element={<About /> }></Route>
+
         </Routes>
       </Router>
+
 
     </div>
   );
